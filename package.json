@@ -1,0 +1,34 @@
+{
+  "name": "react-onehour",
+  "version": "1.0.0",
+  "description": "simple pedagogic exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidostermann/react-onehour.git"
+  },
+  "author": "David Ostermann / Jordan Lefort",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidostermann/react-onehour/issues"
+  },
+  "homepage": "https://github.com/davidostermann/react-onehour#readme",
+  "devDependencies": {
+    "babel-core": "6.21.0",
+    "babel-eslint": "7.1.1",
+    "babel-loader": "6.2.10",
+    "babel-preset-es2015": "6.18.0",
+    "babel-preset-react": "6.16.0",
+    "eslint": "3.12.2",
+    "webpack": "1.14.0",
+    "webpack-dev-server": "1.16.2",
+    "webpack-validator": "2.3.0"
+  },
+  "dependencies": {
+    "react": "15.4.1",
+    "react-dom": "15.4.1"
+  }
+}
