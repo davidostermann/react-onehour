@@ -9,16 +9,23 @@ export default class Addition extends Component {
 			addition : {left_number : 0,right_number : 0},
 			result: 0
 		}
-		this._addition = this._addition.bind(this);
+		this._getResult = this._getResult.bind(this);
 		this._getInputValue = this._getInputValue.bind(this);
 	}
 
+	_objectToArray(){ 
+		this.state.addition = Object.keys(this.state.addition).map((key) => parseFloat(this.state.addition[key]));
+	}
+
 	_addition(){
-        let value = Object.keys(this.state.addition).map((key) => parseFloat(this.state.addition[key]));
-        console.log(value)
 		this.setState({
-			result: value.reduce((a, b) => a+b)
+			result: this.state.addition.reduce((a, b) => a+b)
 		})
+	}
+
+	_getResult(){
+		this._objectToArray.call(this);
+		this._addition.call(this);
 	}
 
 	_getInputValue(e){
@@ -28,6 +35,7 @@ export default class Addition extends Component {
 			addition: state
 		})
 	}
+	
 	render(){
 		return(
 			<div>
@@ -47,7 +55,7 @@ export default class Addition extends Component {
 							type='number'
 							action={this._getInputValue}
 						/>
-						<Button action={this._addition}/>
+						<Button action={this._getResult}/>
 					</div>
 				</div>
 			</div>
