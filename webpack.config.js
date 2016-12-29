@@ -12,10 +12,10 @@ const config = {
     path: PATH.build,
     filename: 'bundle.js'
   },
-  // devServer: {
-  //   inline: true,
-  //   port: 3333
-  // },
+  devServer: {
+    inline: true,
+    port: 3333
+  },
   module: {
     loaders: [
       {
